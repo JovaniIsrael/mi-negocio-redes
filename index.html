@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastelería Esmeralda</title>
     <style>
+        <script>
+    async function cargarProductos() {
+        try {
+            // Le pedimos los datos a tu API local
+            const respuesta = await fetch('http://127.0.0.1:5000/api/productos');
+            const productos = await respuesta.json();
+            
+            // Buscamos el contenedor donde van los pasteles
+            const contenedor = document.querySelector('.menu-grid');
+            
+            // Limpiamos lo que habia antes (los pasteles estaticos)
+            contenedor.innerHTML = '';
+            
+            // Dibujamos cada producto que viene de tu SQL Server
+            productos.forEach(prod => {
+                const card = `
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="${prod.nombre}">
+                        <h3>${prod.nombre}</h3>
+                        <p class="desc">Categoría: ${prod.categoria}</p>
+                        <p class="price">$${prod.precio.toFixed(2)}</p>
+                        <a href="https://wa.me/5281XXXXXXXX?text=Hola, me interesa el ${prod.nombre}" target="_blank" class="btn">Pedir por WhatsApp</a>
+                    </div>
+                `;
+                contenedor.innerHTML += card;
+            });
+        } catch (error) {
+            console.error("Error al conectar con la API:", error);
+        }
+    }
+
+    // Ejecutamos la funcion en cuanto cargue la pagina
+    window.onload = cargarProductos;
+</script>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 

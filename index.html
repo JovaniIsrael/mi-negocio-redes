@@ -3,16 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Detailing Express</title>
+    <title>Pastelería Esmeralda</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
-        h1 { color: #2c3e50; }
-        p { color: #555; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff9f5; /* Tono crema cálido */
+            color: #4a3b32; /* Tono chocolate */
+        }
+        header { 
+            background-color: #d4a373; /* Tono caramelo/galleta */
+            color: white; 
+            padding: 50px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0; font-size: 3em; letter-spacing: 2px; }
+        p.subtitle { font-size: 1.2em; font-style: italic; }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
+        h2.section-title { text-align: center; color: #8b5a2b; font-size: 2em; margin-bottom: 30px; border-bottom: 2px solid #d4a373; display: inline-block; padding-bottom: 10px; }
+        .center-title { text-align: center; }
+
+        .menu-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .card { 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+            overflow: hidden; 
+            text-align: center; 
+            padding-bottom: 25px; 
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card h3 { color: #d4a373; margin: 20px 0 10px; font-size: 1.5em; }
+        .card p.desc { padding: 0 15px; color: #777; height: 40px; }
+        .price { font-weight: bold; font-size: 1.4em; color: #8b5a2b; margin-top: 10px; }
+        
+        .btn { 
+            background-color: #8b5a2b; 
+            color: white; 
+            border: none; 
+            padding: 12px 30px; 
+            border-radius: 25px; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            margin-top: 15px; 
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover { background-color: #6b4423; }
+        
+        footer { 
+            text-align: center; 
+            padding: 25px; 
+            background-color: #4a3b32; 
+            color: white; 
+            margin-top: 50px; 
+        }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Auto Detailing Express</h1>
-    <p>Los mejores servicios de limpieza y detallado para tu vehículo.</p>
-    <p>¡Sitio en construcción!</p>
+
+    <header>
+        <h1>Pastelería Esmeralda</h1>
+        <p class="subtitle">Hecho con amor, horneado a la perfección</p>
+    </header>
+
+    <div class="container">
+        <div class="center-title">
+            <h2 class="section-title">Nuestro Menú</h2>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- Producto 1: El que metiste en SQL -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pastel de Chocolate">
+                <h3>Pastel de Chocolate</h3>
+                <p class="desc">Pastel de chocolate con relleno de fresa</p>
+                <p class="price">$420.00</p>
+                <button class="btn">Pedir por WhatsApp</button>
+            </div>
+
+            <!-- Producto 2: El que metiste en SQL -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pastel de Tres Leches">
+                <h3>Pastel de Tres Leches</h3>
+                <p class="desc">Pastel clásico decorado con fruta fresca</p>
+                <p class="price">$380.00</p>
+                <button class="btn">Pedir por WhatsApp</button>
+            </div>
+
+            <!-- Producto 3: El que metiste en SQL -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Galletas con Chispas">
+                <h3>Galletas con Chispas</h3>
+                <p class="desc">Bolsa con 12 galletas caseras</p>
+                <p class="price">$85.00</p>
+                <button class="btn">Pedir por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Pastelería Esmeralda. Sistema diseñado y estructurado por Ing. Jovani Israel.</p>
+    </footer>
+
 </body>
 </html>

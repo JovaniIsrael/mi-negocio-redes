@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastelería Esmeralda</title>
     <style>
-        body { 
+body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #fff9f5; /* Tono crema cálido */
-            color: #4a3b32; /* Tono chocolate */
+            background-color: #fff0f5; /* Fondo rosa ultra claro (LavenderBlush) */
+            color: #1a1a1a; /* Texto casi negro */
         }
         header { 
-            background-color: #d4a373; /* Tono caramelo/galleta */
-            color: white; 
+            background-color: #1a1a1a; /* Negro elegante */
+            color: #ff66b2; /* Rosa fucsia/brillante */
             padding: 50px 20px; 
             text-align: center; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         h1 { margin: 0; font-size: 3em; letter-spacing: 2px; }
-        p.subtitle { font-size: 1.2em; font-style: italic; }
+        p.subtitle { font-size: 1.2em; font-style: italic; color: #f2f2f2; }
         
         .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
-        h2.section-title { text-align: center; color: #8b5a2b; font-size: 2em; margin-bottom: 30px; border-bottom: 2px solid #d4a373; display: inline-block; padding-bottom: 10px; }
+        h2.section-title { text-align: center; color: #1a1a1a; font-size: 2em; margin-bottom: 30px; border-bottom: 3px solid #ff66b2; display: inline-block; padding-bottom: 10px; }
         .center-title { text-align: center; }
 
         .menu-grid { 
@@ -35,37 +35,39 @@
         .card { 
             background: white; 
             border-radius: 15px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
             overflow: hidden; 
             text-align: center; 
             padding-bottom: 25px; 
             transition: transform 0.3s ease;
+            border: 1px solid #ffe6f0;
         }
-        .card:hover { transform: translateY(-5px); }
+        .card:hover { transform: translateY(-5px); border-color: #ff66b2; }
         .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card h3 { color: #d4a373; margin: 20px 0 10px; font-size: 1.5em; }
-        .card p.desc { padding: 0 15px; color: #777; height: 40px; }
-        .price { font-weight: bold; font-size: 1.4em; color: #8b5a2b; margin-top: 10px; }
+        .card h3 { color: #1a1a1a; margin: 20px 0 10px; font-size: 1.5em; }
+        .card p.desc { padding: 0 15px; color: #555; height: 40px; }
+        .price { font-weight: bold; font-size: 1.4em; color: #ff66b2; margin-top: 10px; }
         
         .btn { 
-            background-color: #8b5a2b; 
-            color: white; 
-            border: none; 
+            background-color: #1a1a1a; 
+            color: #ff66b2; 
+            text-decoration: none; /* Para quitarle la raya al link */
             padding: 12px 30px; 
             border-radius: 25px; 
             font-size: 1.1em; 
-            cursor: pointer; 
+            display: inline-block;
             margin-top: 15px; 
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            border: 2px solid #1a1a1a;
         }
-        .btn:hover { background-color: #6b4423; }
+        .btn:hover { background-color: #ff66b2; color: #1a1a1a; border-color: #ff66b2; }
         
         footer { 
             text-align: center; 
             padding: 25px; 
-            background-color: #4a3b32; 
-            color: white; 
+            background-color: #1a1a1a; 
+            color: #ff66b2; 
             margin-top: 50px; 
         }
     </style>
